@@ -1,5 +1,5 @@
 package automatedfileorganization.src;
 
-public class extensionmapper {
+public class ExtensionMapper {
     
 }

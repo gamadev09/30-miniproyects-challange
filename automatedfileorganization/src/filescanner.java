@@ -1,4 +1,4 @@
 package automatedfileorganization.src;
-public class filescanner {
+public class FileScanner {
     
 }

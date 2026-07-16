@@ -1,5 +1,5 @@
 package automatedfileorganization.src;
 
-public class fileorganizer {
+public class FileOrganizer {
     
 }
