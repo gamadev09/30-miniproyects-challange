@@ -16,7 +16,7 @@ public class main {
             case 1:
                 System.out.println("Please write your path to order");
                 String directory = input.nextLine();
-                
+                FileScanner scanner = new FileScanner();
         }
 
 
