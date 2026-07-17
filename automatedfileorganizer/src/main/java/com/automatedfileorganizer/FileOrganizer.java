@@ -1,4 +1,4 @@
-package automatedfileorganizer.src.main.java.com.automatedfileorganizer;
+package com.automatedfileorganizer;
 
 public class FileOrganizer {
     
