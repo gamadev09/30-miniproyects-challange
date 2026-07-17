@@ -4,16 +4,16 @@ import java.io.File;
 public class FileOrganizer {
 
     public void organize(File file, String category){
-        File parentfolder = file.getParentFile();
+        File parentFolder = file.getParentFile();
 
-        File categoryfolder = new File(parentfolder, category);
+        File categoryFolder = new File(parentFolder, category);
 
-        if(!categoryfolder.exists()){
-            categoryfolder.mkdirs();
+        if(!categoryFolder.exists()){
+            categoryFolder.mkdirs();
         }
 
         File destination = new File(
-            categoryfolder,
+            categoryFolder,
             file.getName()
         );
 
