@@ -14,7 +14,7 @@ public class FileScanner {
         File[] files = directory.listFiles();
 
         if (files == null) {
-            System.out.println("Cannot read directory.");
+            System.out.println("Cannot read directory. / No se puede leer el directorio.");
             return;
         }
 
