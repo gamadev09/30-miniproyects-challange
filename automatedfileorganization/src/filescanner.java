@@ -10,10 +10,19 @@ public class FileScanner {
             System.out.println("Directory does not exist. / El directorio no existe.");
         return;
         }
+
         File[] files = directory.listFiles();
-        for (File file : files){
-            if (file.isFile()){
-                System.out.println(file.getName());
+
+        if (files == null) {
+            System.out.println("Cannot read directory.");
+            return;
+        }
+
+        ExtensionMapper mapper = new ExtensionMapper();
+
+        for (File file : files) {
+            if (file.isFile()) {
+                System.out.println(file.getName() + " -> " + mapper.getCategory(file));
             }
         }
     }
