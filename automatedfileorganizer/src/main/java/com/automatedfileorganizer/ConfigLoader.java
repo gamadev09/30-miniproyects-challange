@@ -14,7 +14,7 @@ public class ConfigLoader {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        File file = new File("automatedfileorganizer/config/categories.json");
+        File file = new File("config/categories.json");
 
         System.out.println("Path: " + file.getAbsolutePath());
         System.out.println("Exists: " + file.exists());
