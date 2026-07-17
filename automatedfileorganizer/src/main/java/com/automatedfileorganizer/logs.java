@@ -8,7 +8,7 @@ public class logs {
 
     private final String logFile = "logs/organizer.log";
 
-    public Logs(){
+    public logs(){
         createLogDirectory();
     }
 
