@@ -11,9 +11,10 @@ public class FileScanner {
         return;
         }
         File[] files = directory.listFiles();
-        for (File file : files){
-            if (file.isFile()){
-                System.out.println(file.getName());
+        ExtensionMapper mapper = new ExtensionMapper();
+        for (File file : files) {
+            if (file.isFile()) {
+                System.out.println(file.getName() + " -> " + mapper.getCategory(file));
             }
         }
     }
