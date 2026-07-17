@@ -3,24 +3,109 @@
         ".jpg",
         ".jpeg",
         ".png",
-        ".gif"
+        ".gif",
+        ".bmp",
+        ".webp",
+        ".svg",
+        ".ico",
+        ".tiff",
+        ".heic"
     ],
-    "music": [
-        ".mp3",
-        ".wav",
-        ".flac"
-    ],
+
     "videos": [
         ".mp4",
         ".mkv",
-        ".avi"
+        ".avi",
+        ".mov",
+        ".wmv",
+        ".webm"
     ],
+
+    "music": [
+        ".mp3",
+        ".wav",
+        ".flac",
+        ".aac",
+        ".ogg",
+        ".m4a"
+    ],
+
     "documents": [
         ".pdf",
+        ".doc",
         ".docx",
-        ".txt"
+        ".txt",
+        ".odt",
+        ".rtf",
+        ".md"
     ],
-    "photoshop": [
-        ".psd"
+
+    "spreadsheets": [
+        ".xls",
+        ".xlsx",
+        ".csv",
+        ".ods"
+    ],
+
+    "presentations": [
+        ".ppt",
+        ".pptx",
+        ".odp"
+    ],
+
+    "archives": [
+        ".zip",
+        ".rar",
+        ".7z",
+        ".tar",
+        ".gz"
+    ],
+
+    "programming": [
+        ".java",
+        ".py",
+        ".js",
+        ".ts",
+        ".html",
+        ".css",
+        ".cpp",
+        ".c",
+        ".cs",
+        ".go",
+        ".rs",
+        ".json",
+        ".xml",
+        ".yaml",
+        ".yml"
+    ],
+
+    "executables": [
+        ".exe",
+        ".msi",
+        ".bat",
+        ".cmd",
+        ".sh",
+        ".jar"
+    ],
+
+    "design": [
+        ".psd",
+        ".ai",
+        ".fig",
+        ".xd",
+        ".sketch"
+    ],
+
+    "fonts": [
+        ".ttf",
+        ".otf",
+        ".woff",
+        ".woff2"
+    ],
+
+    "databases": [
+        ".db",
+        ".sqlite",
+        ".sql"
     ]
 }
