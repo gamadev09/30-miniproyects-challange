@@ -11,6 +11,10 @@ public class FileScanner {
         return;
         }
         File[] files = directory.listFiles();
+        if (files == null) {
+            System.out.println("Cannot read directory.");
+            return;
+        }
         ExtensionMapper mapper = new ExtensionMapper();
         for (File file : files) {
             if (file.isFile()) {
