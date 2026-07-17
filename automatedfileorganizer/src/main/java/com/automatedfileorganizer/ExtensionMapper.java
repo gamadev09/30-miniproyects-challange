@@ -5,10 +5,10 @@ import java.util.Map;
 
 
 public class ExtensionMapper {
-    
+
     private final Map<String, List<String>> categories;
 
-    public ExtensionMapper(Map<String, list<String>> categories){
+    public ExtensionMapper(Map<String, List<String>> categories){
         this.categories = categories;
     }
     public String getCategory(File file){
@@ -33,6 +33,5 @@ public class ExtensionMapper {
             }
         }
         return "unkown";
-        }
     }
 }
