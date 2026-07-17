@@ -24,7 +24,7 @@ public class FileOrganizer {
         }
         else{
             System.out.println(
-                " Cannot move. / No se puede mover. " + file.getName()
+                "Cannot move. / No se puede mover. " + file.getName()
             );
         }
     }
