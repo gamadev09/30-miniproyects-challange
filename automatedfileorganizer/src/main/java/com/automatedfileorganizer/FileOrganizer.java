@@ -3,7 +3,6 @@ package com.automatedfileorganizer;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.util.Objects;
 
 public class FileOrganizer {
@@ -16,7 +15,8 @@ public class FileOrganizer {
 
     public void organize(File file, String category){
 
-        if(category.equals("unknown")){
+        if("unknown".equals(category)){
+
             String message =
                 "Skipped unknown file. / Archivo desconocido omitido: "
                 + file.getName();
@@ -29,19 +29,35 @@ public class FileOrganizer {
 
         File parentFolder = file.getParentFile();
 
+        if(parentFolder == null){
+
+            String message =
+                "Cannot find parent folder: "
+                + file.getName();
+
+            System.out.println(message);
+            logger.write(message);
+
+            return;
+        }
+
+
         File categoryFolder = new File(
             parentFolder,
             category
         );
 
+
         if(!categoryFolder.exists()){
             categoryFolder.mkdirs();
         }
+
 
         File destination = new File(
             categoryFolder,
             file.getName()
         );
+
 
         if(destination.exists()){
 
@@ -55,21 +71,24 @@ public class FileOrganizer {
             return;
         }
 
+
         try {
 
             Files.move(
                 file.toPath(),
-                destination.toPath(),
-                StandardCopyOption.REPLACE_EXISTING
+                destination.toPath()
             );
+
 
             String message =
                 file.getName()
                 + " moved to / se movio a "
                 + category;
 
+
             System.out.println(message);
             logger.write(message);
+
 
         } catch (IOException e){
 
@@ -77,10 +96,11 @@ public class FileOrganizer {
                 "Cannot move / No se puede mover: "
                 + file.getName();
 
+
             System.out.println(message);
             logger.write(message);
 
-            e.printStackTrace();
+            logger.write(e.getMessage());
         }
     }
 }
