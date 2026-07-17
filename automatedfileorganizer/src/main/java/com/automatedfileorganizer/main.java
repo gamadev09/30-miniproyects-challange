@@ -35,11 +35,6 @@ public class Main{
             }
             
         input.close();
-        ConfigLoader loader = new ConfigLoader();
-
-        Map<String, List<String>> categories = loader.loadCategories();
-                
-        System.out.println(categories);
         
     }
 }
