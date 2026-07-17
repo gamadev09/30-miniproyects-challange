@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ConfigLoader {
 
-    public Map<String, List<String>> loadcategories(){
+    public Map<String, List<String>> loadCategories(){
         ObjectMapper mapper = new ObjectMapper();
 
     try {
@@ -22,6 +22,6 @@ public class ConfigLoader {
     catch(IOException e){
         System.out.println("Cannot load categories file. / No se encuentra archivo de categorias");
     }
-    return null;
+    return Map.of();
     }
 }
