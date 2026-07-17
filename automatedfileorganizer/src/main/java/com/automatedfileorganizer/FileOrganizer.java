@@ -19,7 +19,12 @@ public class FileOrganizer {
 
         if(file.renameTo(destination)){
             System.out.println(
-                "Cannot move" + file.getName()
+                file.getName() + " moved to. / se movio a. " + category
+            );
+        }
+        else{
+            System.out.println(
+                " Cannot move. / No se puede mover. " + file.getName()
             );
         }
     }
