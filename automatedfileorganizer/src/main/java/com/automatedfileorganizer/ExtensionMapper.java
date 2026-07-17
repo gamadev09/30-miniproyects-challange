@@ -2,14 +2,17 @@ package com.automatedfileorganizer;
 import java.io.File;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 
 public class ExtensionMapper {
 
+    private static final String UNKNOWN = "unknown";
+
     private final Map<String, List<String>> categories;
 
     public ExtensionMapper(Map<String, List<String>> categories){
-        this.categories = categories;
+        this.categories = Objects.requireNonNull(categories);
     }
     public String getCategory(File file){
         
@@ -18,7 +21,7 @@ public class ExtensionMapper {
         int dotIndex = name.lastIndexOf(".");
 
         if(dotIndex == -1){
-            return "unknown";
+            return UNKNOWN;
         }
 
         String extension = name.substring(dotIndex).toLowerCase();
@@ -32,6 +35,6 @@ public class ExtensionMapper {
                 return category;
             }
         }
-        return "unkown";
+        return UNKNOWN;
     }
 }
