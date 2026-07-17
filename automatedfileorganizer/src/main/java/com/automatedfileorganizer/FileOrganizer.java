@@ -9,7 +9,7 @@ public class FileOrganizer {
         File categoryfolder = new File(parentfolder, category);
 
         if(!categoryfolder.exists()){
-            categoryfolder.mkdir();
+            categoryfolder.mkdirs();
         }
 
         File destination = new File(
