@@ -1,4 +1,5 @@
 package com.automatedfileorganizer;
+
 import java.io.File;
 import java.util.Objects;
 
@@ -21,11 +22,22 @@ public class FileScanner {
     public void scan(String path){
 
         File directory = new File(path);
-        
+
         if(!directory.exists()){
 
             String message =
                 "Directory does not exist. / El directorio no existe.";
+
+            System.out.println(message);
+            logger.write(message);
+
+            return;
+        }
+
+        if(!directory.isDirectory()){
+
+            String message =
+                "Path is not a directory. / La ruta no es un directorio.";
 
             System.out.println(message);
             logger.write(message);
@@ -56,6 +68,10 @@ public class FileScanner {
         for(File file : files){
 
             if(file.isDirectory()){
+
+                if(file.getName().equals("logs")){
+                    continue;
+                }
 
                 scanDirectory(file);
 
