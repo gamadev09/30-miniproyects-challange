@@ -4,11 +4,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-public class logs {
+public class Logger {
 
     private final String logFile = "logs/organizer.log";
 
-    public logs(){
+    public Logger(){
         createLogDirectory();
     }
 
