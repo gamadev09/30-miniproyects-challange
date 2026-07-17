@@ -1,7 +1,0 @@
-public class automated_file_organizer {
-    public static void main(String[] args) {
-        // Code to organize files automatically
-        System.out.println("Automated File Organizer");
-        // Add logic to scan directories, categorize files, and move them accordingly
-    }
-}
