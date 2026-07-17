@@ -10,7 +10,10 @@ public class Main{
         ConfigLoader loader = new ConfigLoader();
         Map<String, List<String>> categories = loader.loadCategories();
         ExtensionMapper mapper = new ExtensionMapper(categories);
-        FileOrganizer organizer = new FileOrganizer();
+        
+        Logger logger = new Logger();
+
+        FileOrganizer organizer = new FileOrganizer(logger);
         FileScanner scanner = new FileScanner(mapper, organizer);
 
         String directory;
@@ -28,15 +31,17 @@ public class Main{
                 directory = input.nextLine();
                 scanner.scan(directory);
             break;
+
             case 2:
                 System.out.println("Porfavor ingresa el directorio a ordenar");
                 directory = input.nextLine();
                 scanner.scan(directory);
             break;
-        default:
-            System.out.println("Invalid option/Opción Inválida");
-        break;
-            }
+
+            default:
+                System.out.println("Invalid option/Opción Inválida");
+            break;
+        }
             
         input.close();
         
