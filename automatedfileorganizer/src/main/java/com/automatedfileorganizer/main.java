@@ -1,4 +1,5 @@
 package com.automatedfileorganizer;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -7,14 +8,21 @@ public class Main{
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+
         ConfigLoader loader = new ConfigLoader();
         Map<String, List<String>> categories = loader.loadCategories();
+
         ExtensionMapper mapper = new ExtensionMapper(categories);
-        
+
         Logger logger = new Logger();
 
         FileOrganizer organizer = new FileOrganizer(logger);
-        FileScanner scanner = new FileScanner(mapper, organizer);
+
+        FileScanner scanner = new FileScanner(
+            mapper,
+            organizer,
+            logger
+        );
 
         String directory;
         
@@ -22,10 +30,12 @@ public class Main{
         System.out.println("Please select:");
         System.out.println("1. English");
         System.out.println("2. Spanish");
-        int languaje = input.nextInt();
+
+        int language = input.nextInt();
         input.nextLine();
         
-        switch(languaje){
+        switch(language){
+
             case 1:
                 System.out.println("Please write your path to order");
                 directory = input.nextLine();
@@ -44,6 +54,5 @@ public class Main{
         }
             
         input.close();
-        
     }
 }
