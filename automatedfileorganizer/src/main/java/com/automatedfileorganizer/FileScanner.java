@@ -11,8 +11,8 @@ public class FileScanner {
         ExtensionMapper mapper,
         FileOrganizer organizer
     ){
-        this.mapper = Objects.requireNonNull(mapper)
-        this.organizer = Objects.requireNonNull(organizer)
+        this.mapper = Objects.requireNonNull(mapper);
+        this.organizer = Objects.requireNonNull(organizer);
     }
 
     public void scan(String path){
