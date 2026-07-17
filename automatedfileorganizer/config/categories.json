@@ -9,7 +9,16 @@
         ".svg",
         ".ico",
         ".tiff",
-        ".heic"
+        ".tif",
+        ".heic",
+        ".avif",
+        ".jfif",
+        ".jp2",
+        ".raw",
+        ".cr2",
+        ".nef",
+        ".arw",
+        ".dng"
     ],
 
     "videos": [
@@ -18,7 +27,15 @@
         ".avi",
         ".mov",
         ".wmv",
-        ".webm"
+        ".webm",
+        ".m4v",
+        ".mpeg",
+        ".mpg",
+        ".3gp",
+        ".flv",
+        ".ts",
+        ".mts",
+        ".m2ts"
     ],
 
     "music": [
@@ -27,7 +44,13 @@
         ".flac",
         ".aac",
         ".ogg",
-        ".m4a"
+        ".m4a",
+        ".wma",
+        ".opus",
+        ".aiff",
+        ".alac",
+        ".mid",
+        ".midi"
     ],
 
     "documents": [
@@ -37,20 +60,26 @@
         ".txt",
         ".odt",
         ".rtf",
-        ".md"
+        ".md",
+        ".tex",
+        ".epub",
+        ".mobi"
     ],
 
     "spreadsheets": [
         ".xls",
         ".xlsx",
         ".csv",
-        ".ods"
+        ".ods",
+        ".tsv"
     ],
 
     "presentations": [
         ".ppt",
         ".pptx",
-        ".odp"
+        ".odp",
+        ".pps",
+        ".ppsx"
     ],
 
     "archives": [
@@ -58,25 +87,54 @@
         ".rar",
         ".7z",
         ".tar",
-        ".gz"
+        ".gz",
+        ".bz2",
+        ".xz",
+        ".zst"
     ],
 
     "programming": [
         ".java",
+        ".class",
         ".py",
         ".js",
         ".ts",
+        ".jsx",
+        ".tsx",
         ".html",
         ".css",
+        ".scss",
+        ".sass",
         ".cpp",
         ".c",
+        ".h",
         ".cs",
+        ".php",
         ".go",
         ".rs",
+        ".rb",
+        ".swift",
+        ".kt",
+        ".kts",
+        ".dart",
+        ".lua",
+        ".r",
+        ".sql",
+        ".graphql"
+    ],
+
+    "configuration": [
         ".json",
         ".xml",
         ".yaml",
-        ".yml"
+        ".yml",
+        ".toml",
+        ".ini",
+        ".cfg",
+        ".conf",
+        ".env",
+        ".properties",
+        ".reg"
     ],
 
     "executables": [
@@ -85,14 +143,21 @@
         ".bat",
         ".cmd",
         ".sh",
-        ".jar"
+        ".jar",
+        ".apk",
+        ".app",
+        ".deb",
+        ".rpm"
     ],
 
     "design": [
         ".psd",
+        ".psb",
         ".ai",
-        ".fig",
+        ".eps",
+        ".indd",
         ".xd",
+        ".fig",
         ".sketch"
     ],
 
@@ -100,12 +165,95 @@
         ".ttf",
         ".otf",
         ".woff",
-        ".woff2"
+        ".woff2",
+        ".eot"
     ],
 
     "databases": [
         ".db",
         ".sqlite",
-        ".sql"
+        ".sqlite3",
+        ".mdb",
+        ".accdb",
+        ".dbf"
+    ],
+
+    "disk_images": [
+        ".iso",
+        ".img",
+        ".dmg",
+        ".vhd",
+        ".vhdx",
+        ".vmdk"
+    ],
+
+    "3d_models": [
+        ".obj",
+        ".fbx",
+        ".blend",
+        ".stl",
+        ".dae",
+        ".3ds",
+        ".gltf",
+        ".glb"
+    ],
+
+    "cad": [
+        ".dwg",
+        ".dxf",
+        ".step",
+        ".stp",
+        ".iges"
+    ],
+
+    "subtitles": [
+        ".srt",
+        ".vtt",
+        ".ass",
+        ".ssa",
+        ".sub"
+    ],
+
+    "email": [
+        ".eml",
+        ".msg",
+        ".pst",
+        ".ost"
+    ],
+
+    "certificates": [
+        ".pem",
+        ".crt",
+        ".cer",
+        ".pfx",
+        ".p12",
+        ".csr"
+    ],
+
+    "backup": [
+        ".bak",
+        ".old",
+        ".tmp",
+        ".swp",
+        ".dmp"
+    ],
+
+    "logs": [
+        ".log"
+    ],
+
+    "virtual_machines": [
+        ".ova",
+        ".ovf",
+        ".qcow2"
+    ],
+
+    "scientific": [
+        ".mat",
+        ".h5",
+        ".hdf5",
+        ".fits",
+        ".nc",
+        ".parquet"
     ]
 }
