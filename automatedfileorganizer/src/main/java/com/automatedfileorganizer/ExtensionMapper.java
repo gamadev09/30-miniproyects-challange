@@ -1,5 +1,12 @@
 package com.automatedfileorganizer;
 import java.io.File;
+import java.io.IOException;
+import java.util.Map;
+import java.util.List;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 public class ExtensionMapper {
     public String getCategory(File file){
@@ -14,30 +21,5 @@ public class ExtensionMapper {
 
         String extension = name.substring(dotIndex).toLowerCase();
 
-        switch(extension){
-                        case ".jpg":
-            case ".jpeg":
-            case ".png":
-                return "images";
-
-            case ".psd":
-                return "photoshop";
-
-            case ".mp3":
-            case ".wav":
-                return "music";
-
-            case ".mp4":
-            case ".mkv":
-                return "videos";
-
-            case ".pdf":
-            case ".docx":
-            case ".txt":
-                return "documents";
-
-            default:
-                return "unknown";
-        }
     }
 }
