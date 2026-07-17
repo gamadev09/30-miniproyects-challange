@@ -16,7 +16,6 @@ public class ConfigLoader {
         return mapper.readValue(
             new File("config/categories.json"),
             new TypeReference<Map<String, List<String>>>() {}
-                
         );
     }
     catch(IOException e){
