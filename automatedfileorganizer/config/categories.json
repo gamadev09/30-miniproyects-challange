@@ -1,0 +1,26 @@
+{
+    "images": [
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".gif"
+    ],
+    "music": [
+        ".mp3",
+        ".wav",
+        ".flac"
+    ],
+    "videos": [
+        ".mp4",
+        ".mkv",
+        ".avi"
+    ],
+    "documents": [
+        ".pdf",
+        ".docx",
+        ".txt"
+    ],
+    "photoshop": [
+        ".psd"
+    ]
+}

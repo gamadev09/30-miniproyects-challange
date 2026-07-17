@@ -1,4 +1,6 @@
 package com.automatedfileorganizer;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main{
@@ -33,6 +35,11 @@ public class Main{
             }
             
         input.close();
+        ConfigLoader loader = new ConfigLoader();
+
+        Map<String, List<String>> categories = loader.loadCategories();
+                
+        System.out.println(categories);
         
     }
 }
