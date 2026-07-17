@@ -7,9 +7,13 @@ public class Main{
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        ConfigLoader loader = new ConfigLoader();
+        Map<String, List<String>> categories = loader.loadCategories();
+        ExtensionMapper mapper = new ExtensionMapper(categories);
+        FileOrganizer organizer = new FileOrganizer();
+        FileScanner scanner = new FileScanner(mapper, organizer);
 
         String directory;
-        FileScanner scanner = new FileScanner();
         
         System.out.println("Automated File Organization");
         System.out.println("Please select:");
