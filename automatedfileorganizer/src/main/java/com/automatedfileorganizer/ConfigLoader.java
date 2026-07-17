@@ -27,7 +27,7 @@ public class ConfigLoader {
 
         } catch (IOException e) {
             System.out.println("Cannot load categories file.");
-            e.printStackTrace(); // <-- Very useful while debugging
+            e.printStackTrace();
         }
 
         return Map.of();
