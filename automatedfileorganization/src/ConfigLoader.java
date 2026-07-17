@@ -1,5 +1,5 @@
 package automatedfileorganization.src;
 
-public class ConfiLoader {
+public class ConfigLoader {
     
 }
