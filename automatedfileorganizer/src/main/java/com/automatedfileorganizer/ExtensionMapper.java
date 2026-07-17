@@ -1,4 +1,4 @@
-package automatedfileorganization.src;
+package automatedfileorganizer.src.main.java.com.automatedfileorganizer;
 import java.io.File;
 
 public class ExtensionMapper {
