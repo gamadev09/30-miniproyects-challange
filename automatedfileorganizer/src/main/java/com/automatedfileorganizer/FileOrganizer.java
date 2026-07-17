@@ -4,16 +4,26 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.Objects;
 
 public class FileOrganizer {
+
+    private final Logger logger;
+
+    public FileOrganizer(Logger logger){
+        this.logger = Objects.requireNonNull(logger);
+    }
 
     public void organize(File file, String category){
 
         if(category.equals("unknown")){
-            System.out.println(
+            String message =
                 "Skipped unknown file. / Archivo desconocido omitido: "
-                + file.getName()
-            );
+                + file.getName();
+
+            System.out.println(message);
+            logger.write(message);
+
             return;
         }
 
@@ -34,10 +44,14 @@ public class FileOrganizer {
         );
 
         if(destination.exists()){
-            System.out.println(
+
+            String message =
                 "File already exists. / El archivo ya existe: "
-                + file.getName()
-            );
+                + file.getName();
+
+            System.out.println(message);
+            logger.write(message);
+
             return;
         }
 
@@ -49,18 +63,22 @@ public class FileOrganizer {
                 StandardCopyOption.REPLACE_EXISTING
             );
 
-            System.out.println(
+            String message =
                 file.getName()
                 + " moved to / se movio a "
-                + category
-            );
+                + category;
+
+            System.out.println(message);
+            logger.write(message);
 
         } catch (IOException e){
 
-            System.out.println(
+            String message =
                 "Cannot move / No se puede mover: "
-                + file.getName()
-            );
+                + file.getName();
+
+            System.out.println(message);
+            logger.write(message);
 
             e.printStackTrace();
         }
